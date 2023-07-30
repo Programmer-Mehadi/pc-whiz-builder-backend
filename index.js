@@ -58,6 +58,7 @@ const run = async () => {
           }
         }
       ]).toArray();
+      res.status(200).json(products);
     })
     app.get('/products', async (req, res) => {
       const product = await productsCollection.find().toArray()
